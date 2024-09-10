@@ -1,16 +1,16 @@
-#Comandos básicos do projeto
+#Comandos básicos do projeto#
 
-##criar anbiente
+##criar anbiente##
 python3 -m venv venv
 
-##ativar ambiente Linux MacOs
+##ativar ambiente Linux MacOs##
 source ./venv/bin/activate
 
-##ativar ambiente Windows
+##ativar ambiente Windows##
 myenv\Scripts\activate
 
-##instalar dependências
+##instalar dependências##
 pip3 install -r requirements.txt 
 
-##rodar
+##rodar##
 python3 run.py 

@@ -1,4 +1,0 @@
-[87513:259:0213/120133.258116:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
-[87524:259:0213/120133.548247:WARNING:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
-[87525:20227:0213/120138.508346:WARNING:sqlite_persistent_store_backend_base.cc(198)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:248 to client_task_runner_.
-[87525:20227:0213/120138.508743:WARNING:sqlite_persistent_store_backend_base.cc(198)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:248 to client_task_runner_.

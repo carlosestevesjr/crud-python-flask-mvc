@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard da Fila</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+        table, th, td {
+            border: 1px solid #333;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.5rem 1rem;
+            text-align: left;
+        }
+        table {
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Status da Fila</h1>
+    <h2>Pendentes: {{ queue_info.pending }}</h2>
+    
+    <h2>Tarefas Ativas</h2>
+    {% if queue_info.active %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Args</th>
+                <th>Kwargs</th>
+                <th>Worker</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in queue_info.active %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.name }}</td>
+                <td>{{ task.args }}</td>
+                <td>{{ task.kwargs }}</td>
+                <td>{{ task.worker }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Nenhuma tarefa ativa no momento.</p>
+    {% endif %}
+    
+    <h2>Tarefas Completadas</h2>
+    {% if queue_info.completed %}
+    <ul>
+        {% for completed in queue_info.completed %}
+        <li>{{ completed }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhuma tarefa completada.</p>
+    {% endif %}
+</body>
+</html>

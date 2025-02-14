@@ -1,6 +1,15 @@
 Flask==2.2.1  
+selenium==4.8.0
+webdriver-manager==3.8.5
 Flask-SQLAlchemy==3.0.3
+openpyxl
 Werkzeug==2.2.2
 authlib==0.15.4
 pymysql
 requests
+python-dotenv>=1.0.0
+pandas==2.2.0
+redis==5.0.0
+celery==5.3.4
+flask-cors
+
